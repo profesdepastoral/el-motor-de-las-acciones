@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Motor de las Acciones: Del Miedo a la Libertad Pascual</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mono: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        skyaccent: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .light-aesthetic {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .card-border {
+            border: 2px solid #0f172a;
+            box-shadow: 4px 4px 0px #0f172a;
+        }
+        .card-border-subtle {
+            border: 1px solid #1e293b;
+        }
+        .btn-brutal {
+            border: 2px solid #0f172a;
+            box-shadow: 3px 3px 0px #0f172a;
+            transition: all 0.1s ease;
+        }
+        .btn-brutal:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px #0f172a;
+        }
+        .btn-brutal:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #0f172a;
+        }
+    </style>
+</head>
+<body class="light-aesthetic font-sans antialiased selection:bg-sky-400 selection:text-slate-950">
+
+    <!-- BARRA DE NAVEGACIÓN FIJA SUPERIOR -->
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b-2 border-slate-950 px-4 py-3 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <span class="text-white font-extrabold text-sm sm:text-base tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-compass text-sky-400"></i> Libertad Pascual
+            </span>
+            <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold">
+                <a href="#reflexion" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-sky-400 hover:text-slate-950 text-slate-200 transition">Reflexión</a>
+                <a href="#animacion" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-sky-400 hover:text-slate-950 text-slate-200 transition">Animación</a>
+                <a href="#teoria" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-sky-400 hover:text-slate-950 text-slate-200 transition">Teoría</a>
+                <a href="#camino" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-sky-400 hover:text-slate-950 text-slate-200 transition">Camino</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / PORTADA -->
+    <header class="bg-mono-900 text-white min-h-[60vh] flex flex-col justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 py-16 border-b-4 border-slate-950">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-sky-500/10 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs sm:text-sm font-bold tracking-widest text-sky-400 uppercase bg-slate-800 border-2 border-slate-700 rounded-lg">
+                Clase Teológico-Antropológica
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                El Motor de las Acciones:<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-slate-200 to-sky-200">
+                    Del Miedo a la Libertad Pascual
+                </span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-8">
+                ¿Qué conduce nuestra vida si, desde la fe, la muerte en sus múltiples formas ya no tiene la última palabra?
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#reflexion" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-sky-400 hover:bg-sky-500 text-slate-950 font-bold transition-all btn-brutal">
+                    <i class="fa-solid fa-book-open"></i> Introducción Reflexiva
+                </a>
+                <a href="#animacion" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-slate-100 text-slate-950 font-bold transition-all btn-brutal">
+                    <i class="fa-solid fa-film"></i> Ver Animación
+                </a>
+                <a href="#teoria" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium border border-slate-700 transition-all">
+                    <i class="fa-solid fa-graduation-cap"></i> Desarrollo Teórico
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- SECCIÓN 1: INTRODUCCIÓN REFLEXIVA -->
+        <section id="reflexion" class="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-10 card-border">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-sky-100 text-sky-800 rounded-md font-bold text-xs uppercase tracking-wider border border-sky-300">
+                    <i class="fa-solid fa-compass"></i> Punto de partida existencial
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    ¿Qué nos mueve cada mañana? El motor oculto de la presión y el temor
+                </h2>
+                <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-light">
+                    Detengámonos un momento a observar el engranaje invisible de nuestra rutina. Muchas veces asumimos que actuamos por convicción, por deseo genuino o por libertad. Sin embargo, si miramos de cerca el pulso de nuestros días, descubrimos que gran parte de nuestras decisiones están empujadas por un motor de supervivencia y urgencia defensiva.
+                </p>
+
+                <!-- EJEMPLOS COTIDIANOS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <div class="bg-slate-50 p-5 rounded-2xl card-border-subtle flex gap-4 items-start">
+                        <div class="w-8 h-8 rounded-lg bg-slate-200 text-slate-900 flex items-center justify-center shrink-0 font-bold text-sm">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Reaccionar por agresión o dureza</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Atender, escuchar o ceder ante alguien únicamente cuando se expresa con gritos, ultimátums o dureza, operando bajo la amenaza latente del conflicto.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl card-border-subtle flex gap-4 items-start">
+                        <div class="w-8 h-8 rounded-lg bg-slate-200 text-slate-900 flex items-center justify-center shrink-0 font-bold text-sm">
+                            <i class="fa-solid fa-heart-crack"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Vincularnos desde el terror a la pérdida</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Cuidar a una pareja, un amigo o un espacio laboral no por gratuidad, sino por el miedo profundo a la soledad, al abandono o al rechazo inminente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl card-border-subtle flex gap-4 items-start">
+                        <div class="w-8 h-8 rounded-lg bg-slate-200 text-slate-900 flex items-center justify-center shrink-0 font-bold text-sm">
+                            <i class="fa-solid fa-hourglass-end"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Responsabilidades al límite del colapso</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Dejar tareas o proyectos para el último segundo, obligando al sistema nervioso a funcionar bajo la descarga de adrenalina ante el riesgo real de fallar sin margen.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl card-border-subtle flex gap-4 items-start">
+                        <div class="w-8 h-8 rounded-lg bg-slate-200 text-slate-900 flex items-center justify-center shrink-0 font-bold text-sm">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Mirada fatalista del día</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Encarar cada jornada con tedio y ansiedad, anticipando mentalmente escenarios catastróficos: todo será aburrido, dañino, difícil, hostil o peligroso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-sky-50 p-6 rounded-2xl border-2 border-sky-400 text-slate-900 mt-6">
+                    <p class="text-sm font-medium leading-relaxed">
+                        <strong class="text-slate-950 font-bold">La invitación de la clase:</strong> Reconocer estas dinámicas sin culpa, examinarlas a la luz de las ciencias y contrastarlas profundamente con la propuesta liberadora de la fe cristiana, donde el miedo deja de ser el timonel de nuestra existencia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ANIMACIÓN / RECURSO VISUAL -->
+        <section id="animacion" class="scroll-mt-24">
+            <div class="bg-mono-900 rounded-3xl p-6 sm:p-8 card-border text-white">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <div class="flex items-center gap-2 text-sky-400 text-sm font-semibold uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-film"></i> Parábola Visual en Metáfora (20s Loop)
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-bold">La Transición Existencial: Del Temor a la Luz</h2>
+                    </div>
+                    <!-- CONTROLES ANIMACIÓN -->
+                    <div class="flex items-center gap-3 bg-slate-800 p-2 rounded-xl border border-slate-700">
+                        <button id="btnPlayPause" class="p-2.5 px-4 rounded-lg bg-sky-400 text-slate-950 hover:bg-sky-300 font-bold transition flex items-center gap-2 text-sm">
+                            <i id="playIcon" class="fa-solid fa-pause"></i>
+                            <span id="playText">Pausar</span>
+                        </button>
+                        <button id="btnRestart" class="p-2.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-white transition text-sm">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CANVAS DE ANIMACIÓN -->
+                <div class="relative w-full aspect-[16/9] sm:aspect-[21/9] bg-slate-950 rounded-2xl overflow-hidden border-2 border-slate-800 shadow-inner flex items-center justify-center">
+                    <canvas id="simCanvas" class="w-full h-full block"></canvas>
+                    
+                    <!-- Cronómetro & Indicador de Fase Overlay -->
+                    <div class="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-mono text-slate-300 flex items-center gap-2">
+                        <span id="timerText" class="text-sky-400 font-bold">00.0s</span> / 20.0s
+                    </div>
+                    
+                    <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-medium text-sky-300 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+                        <span id="phaseLabel">Fase 1: La Huida del Temor</span>
+                    </div>
+                </div>
+
+                <!-- LEYENDA Y EXPLICACIÓN DE LA ANIMACIÓN -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 text-sm">
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 flex gap-3">
+                        <div class="w-4 h-4 rounded-full bg-rose-500 shrink-0 mt-0.5 shadow-[0_0_8px_rgba(244,63,94,0.6)]"></div>
+                        <div>
+                            <strong class="text-slate-100 block mb-1">Esfera Roja (Miedo / Muerte):</strong>
+                            <p class="text-slate-400 text-xs leading-relaxed">Representa el motor de la amenaza, el conflicto, el sesgo de supervivencia y la finitud que persigue al ser humano.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 flex gap-3">
+                        <div class="w-4 h-4 rounded-full bg-cyan-400 shrink-0 mt-0.5 shadow-[0_0_8px_rgba(34,211,238,0.6)]"></div>
+                        <div>
+                            <strong class="text-slate-100 block mb-1">Esfera Azul (El Humano):</strong>
+                            <p class="text-slate-400 text-xs leading-relaxed">Pasa de huir aterrado mirando atrás, a transformarse al encontrar la luz e iluminarse con serenidad.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700 flex gap-3 sm:col-span-2 lg:col-span-1">
+                        <div class="w-4 h-4 rounded-full bg-amber-300 shrink-0 mt-0.5 shadow-[0_0_12px_rgba(252,211,77,0.8)]"></div>
+                        <div>
+                            <strong class="text-slate-100 block mb-1">El Faro (Dios / Pascua):</strong>
+                            <p class="text-slate-400 text-xs leading-relaxed">La presencia amorosa que disipa la muerte. Transforma la carrera reactiva en una caminata orientada con sentido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: DESARROLLO TEÓRICO (AUTORES Y DISCIPLINAS) -->
+        <section id="teoria" class="scroll-mt-24 space-y-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="px-3 py-1 bg-slate-200 text-slate-800 rounded-md font-bold text-xs uppercase tracking-wider border border-slate-300">
+                    Fundamentación Profunda
+                </span>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mt-3">Desarrollo Teórico: Autores y Perspectivas</h2>
+                <p class="mt-3 text-slate-600 text-lg">Una lectura rigurosa de cómo las disciplinas descifran el motor de nuestras acciones y el salto hacia la fe.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- 1. Antropología Filosófica (Ernest Becker) -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 card-border">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-skull"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-xl">1. Antropología Filosófica y la Gestión del Terror (Ernest Becker)</h3>
+                            <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">La finitud como motor cultural</span>
+                        </div>
+                    </div>
+                    <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>
+                            En su obra cumbre <em>La negación de la muerte</em> (Premio Pulitzer 1974), el antropólogo cultural <strong>Ernest Becker</strong> sintetiza la tesis de que la civilización humana es, en su raíz más honda, un elaborado sistema de defensa contra el terror a la propia mortalidad. A diferencia de los animales, el ser humano vive con la trágica lucidez de saber que va a morir.
+                        </p>
+                        <p>
+                            Becker sostiene que para amortiguar este terror paralizante, las personas construyen <em>proyectos de inmortalidad</em> simbólica: instituciones, obras de arte, legados familiares, ideologías políticas, acumulación de riquezas o estatus social. Todo esto funciona como un escudo protector para sentir que dejamos huella y que la nada no nos devorará. El motor de la acción humana, desde esta lectura antropológica pura, es escapar de la vulnerabilidad biológica a través de la auto-justificación y el heroísmo cultural.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Psicología Evolutiva y Neurobiología -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 card-border">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-xl">2. Psicología Evolutiva y el Sesgo de Supervivencia (Amígdala y Cerebro Límbico)</h3>
+                            <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">El diseño biológico de la alerta</span>
+                        </div>
+                    </div>
+                    <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>
+                            Desde la biología evolutiva, nuestro sistema nervioso central no está diseñado originariamente para la autorrealización o la felicidad abstracta, sino para la <strong>supervivencia</strong>. El cerebro humano evolucionó priorizando el <em>sesgo de negatividad</em>: nuestros antepasados que ignoraban un peligro potencial (un sonido en los arbustos) morían; aquellos que asumían lo peor y huían, sobrevivían y transmitían sus genes.
+                        </p>
+                        <p>
+                            La amígdala cerebral actúa como un radar permanente de amenazas. El problema en la sociedad contemporánea es que este mecanismo arcaico se activa ante estímulos abstractos y sociales (una crítica en el trabajo, un mensaje no respondido, la inestabilidad económica). El cerebro reacciona con respuestas de lucha, huida o parálisis. Vivimos secuestrados por un estado de alerta crónica que nos vuelve defensivos, reactivos e incapaces de actuar desde la gratuidad.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Sociología y Ciencia Política (Zygmunt Bauman y Thomas Hobbes) -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 card-border">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-xl">3. Sociología y Política: La Sociedad del Riesgo y el Miedo Institucionalizado (Zygmunt Bauman)</h3>
+                            <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Incertidumbre líquida y polarización</span>
+                        </div>
+                    </div>
+                    <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>
+                            El sociólogo polaco-británico <strong>Zygmunt Bauman</strong> acuñó el concepto de <em>"modernidad líquida"</em> para describir un mundo donde todas las estructuras sociales, laborales y vinculares se desvanecen antes de tener tiempo de solidificarse. En este escenario, la característica dominante es la <em>inseguridad ontológica</em>: nada es seguro, previsible ni duradero.
+                        </p>
+                        <p>
+                            Bauman analiza cómo las industrias, los mercados y los discursos políticos contemporáneos lucran y se sostienen administrando el miedo. Ya Thomas Hobbes, en el siglo XVII, postulaba que el miedo a la muerte violenta es el cimiento primario del pacto social y del control político. Hoy en día, la política del miedo moviliza pasiones tristes (rechazo al migrante, desconfianza del vecino, pánico al colapso), generando una sociedad fragmentada bajo el lema del "sálvese quien pueda", donde el otro es percibido instintivamente como un competidor o una amenaza.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. La Propuesta de la Fe Cristiana -->
+                <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 card-border">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-sky-400 text-slate-950 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-cross"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-xl">4. La Disrupción de la Fe Cristiana: La Libertad Pascual</h3>
+                            <span class="text-xs text-sky-400 font-semibold uppercase tracking-wider">El "No Temas" y la victoria sobre la muerte</span>
+                        </div>
+                    </div>
+                    <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>
+                            La fe cristiana no descarta ni ignora los diagnósticos anteriores; por el contrario, los valida con absoluta lucidez. La Carta a los Hebreos afirma que la humanidad entera vive <em>"sujeta a servidumbre por el temor a la muerte"</em> (Hb 2, 15). Reconoce que somos esclavos del miedo a perder el control, el estatus, la salud o la vida.
+                        </p>
+                        <p>
+                            Sin embargo, la irrupción de los Evangelios y de la Resurrección cambia radicalmente el centro de gravedad. Jesús atraviesa la peor de las muertes y la vence. Al hacerlo, le quita a la muerte su aguijón definitivo y su capacidad de chantaje. El peor escenario posible (la aniquilación y el fracaso absoluto) ya ha sido redimido por el amor. 
+                        </p>
+                        <p>
+                            Por lo tanto, la fe propone un nuevo motor: ya no actuamos para salvarnos a nosotros mismos a costa de los demás (lógica de escasez y defensa), sino que actuamos desde la **gratuidad** y la **audacia pascual (*parrhesía*)**. Sabiendo que la vida es un don asegurado en Dios, nuestra energía vital se libera para entregarnos, amar sin garantías de retorno y caminar hacia el futuro sin terror.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: ¿CÓMO CAMINAMOS? (LOT VS PEDRO) -->
+        <section id="camino" class="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-10 card-border">
+            <div class="max-w-3xl mb-8">
+                <span class="text-slate-600 font-bold text-xs tracking-widest uppercase bg-slate-100 px-3 py-1 rounded-md border border-slate-300">Teología del Camino</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">¿Cómo caminamos? Huyendo o Mirando a la Vida</h2>
+                <p class="mt-3 text-slate-600 text-base">
+                    La dirección de la mirada determina la calidad de los pasos. Hay dos posturas existenciales fundamentales reflejadas en las Escrituras:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Muerte a los talones / Mujer de Lot -->
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl card-border-subtle flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 text-slate-900 font-bold mb-4">
+                            <i class="fa-solid fa-person-walking-arrow-loop-left text-2xl text-slate-700"></i>
+                            <h3 class="text-xl">1. Caminar huyendo, mirando hacia atrás</h3>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                            Sintiéndose perseguido por la amenaza, el pasado, las culpas o la muerte que pisa los talones. Es la postura de huida desesperada y parálisis nostálgica.
+                        </p>
+                        <div class="bg-white p-4 rounded-xl card-border-subtle mb-4">
+                            <h4 class="text-slate-900 font-bold text-xs uppercase mb-1"><i class="fa-solid fa-book-bible"></i> El símbolo: La Mujer de Lot (Génesis 19)</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Al escapar de la destrucción, miró hacia atrás con desesperación y apego al peligro. Quedó petrificada en estatua de sal. Mirar fijamente la amenaza congela la vitalidad y nos vuelve rígidos.
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-1.5 font-mono font-semibold">
+                        <li>• Motor: Evitación del dolor y defensa.</li>
+                        <li>• Estado: Rigidez, sospecha y parálisis.</li>
+                    </ul>
+                </div>
+
+                <!-- Mirando al Maestro / Pedro -->
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl card-border-subtle flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 text-slate-900 font-bold mb-4">
+                            <i class="fa-solid fa-person-walking-arrow-right text-2xl text-sky-600"></i>
+                            <h3 class="text-xl">2. Caminar con los ojos en la Luz</h3>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                            Avanzar hacia la vida que nos espera al frente, confiando en Aquel que nos llama por encima de cualquier tormenta o circunstancia adversa.
+                        </p>
+                        <div class="bg-white p-4 rounded-xl card-border-subtle mb-4">
+                            <h4 class="text-slate-900 font-bold text-xs uppercase mb-1"><i class="fa-solid fa-book-bible"></i> El símbolo: Pedro sobre las Aguas (Mateo 14)</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Mientras Pedro mantuvo sus ojos fijos en Jesús, caminó sobre lo imposible. Al mirar el viento y las olas (el peligro y el miedo), comenzó a hundirse. Jesús lo sostiene con misericordia.
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-1.5 font-mono font-semibold">
+                        <li>• Motor: Confianza, llamada y amor (Ágape).</li>
+                        <li>• Estado: Audacia, libertad y fluidez vital.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-mono-900 text-slate-400 py-10 border-t-4 border-slate-950 text-center text-xs">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="mb-2 text-slate-200 font-bold">Recurso Pedagógico Teológico-Antropológico • "No temas, yo he vencido al mundo" (Jn 16, 33)</p>
+            <p class="text-slate-500">Diseñado para clases interactivas, formación espiritual y talleres de discernimiento.</p>
+        </div>
+    </footer>
+
+    <!-- LOGICA JS DE LA ANIMACIÓN DE CANVAS (20 SEGUNDOS LOOP) -->
+    <script>
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const btnPlayPause = document.getElementById('btnPlayPause');
+        const btnRestart = document.getElementById('btnRestart');
+        const playIcon = document.getElementById('playIcon');
+        const playText = document.getElementById('playText');
+        const timerText = document.getElementById('timerText');
+        const phaseLabel = document.getElementById('phaseLabel');
+
+        let isPlaying = true;
+        let animationFrameId = null;
+        let startTime = null;
+        let elapsedTime = 0;
+        const DURATION = 20; // 20 segundos
+
+        function resizeCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function drawScene(t) {
+            const w = canvas.width;
+            const h = canvas.height;
+            const centerY = h * 0.65;
+            const trackStartX = w * 0.08;
+            const trackEndX = w * 0.92;
+            const trackLength = trackEndX - trackStartX;
+
+            ctx.clearRect(0, 0, w, h);
+
+            // Fondo sutil escala de grises / oscuro
+            const bgGradient = ctx.createLinearGradient(0, 0, w, h);
+            bgGradient.addColorStop(0, '#020617');
+            bgGradient.addColorStop(1, '#0f172a');
+            ctx.fillStyle = bgGradient;
+            ctx.fillRect(0, 0, w, h);
+
+            // Línea de la Vida
+            ctx.beginPath();
+            ctx.moveTo(trackStartX, centerY);
+            ctx.lineTo(trackEndX, centerY);
+            ctx.strokeStyle = '#334155';
+            ctx.lineWidth = 4;
+            ctx.setLineDash([8, 8]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // FARO / LUZ DIVINA (Derecha)
+            const faroX = trackEndX + 10;
+            const faroY = centerY;
+
+            let humanX, redX, redAlpha, humanColor, phaseText;
+
+            if (t <= 8) {
+                // FASE 1: Huida del Temor
+                const progress = t / 8;
+                humanX = trackStartX + progress * (trackLength * 0.35);
+                redX = humanX - (80 - progress * 20);
+                redAlpha = 1.0;
+                humanColor = '#22d3ee'; // Azul cian
+                phaseText = "Fase 1: El Temor y la Amenaza persiguen las decisiones";
+                humanX += Math.sin(t * 15) * 2;
+            } 
+            else if (t <= 13) {
+                // FASE 2: Transición / Desvanecimiento del Miedo
+                const progress = (t - 8) / 5;
+                humanX = trackStartX + (trackLength * 0.35) + progress * (trackLength * 0.25);
+                redX = humanX - 60 - progress * 40;
+                redAlpha = 1.0 - progress;
+                humanColor = '#a855f7'; 
+                phaseText = "Fase 2: La Luz vence a la Muerte. El Temor se desvanece";
+            } 
+            else {
+                // FASE 3: Caminata hacia la Luz
+                const progress = (t - 13) / 7;
+                humanX = trackStartX + (trackLength * 0.60) + progress * (trackLength * 0.35);
+                redAlpha = 0.0;
+                humanColor = '#fbbf24'; // Dorado Pascual
+                phaseText = "Fase 3: Libertad Pascual - Caminar mirando al Faro de la Vida";
+            }
+
+            phaseLabel.textContent = phaseText;
+
+            // DIBUJAR FARO / LUZ
+            const lightGlowRadius = 40 + Math.sin(t * 3) * 10 + (t / 20) * 30;
+            const faroGradient = ctx.createRadialGradient(faroX, faroY, 5, faroX, faroY, lightGlowRadius);
+            faroGradient.addColorStop(0, 'rgba(254, 240, 138, 1)');
+            faroGradient.addColorStop(0.4, 'rgba(245, 158, 11, 0.6)');
+            faroGradient.addColorStop(1, 'rgba(245, 158, 11, 0)');
+
+            ctx.beginPath();
+            ctx.arc(faroX, faroY, lightGlowRadius, 0, Math.PI * 2);
+            ctx.fillStyle = faroGradient;
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(faroX, faroY, 12, 0, Math.PI * 2);
+            ctx.fillStyle = '#fef08a';
+            ctx.shadowColor = '#f59e0b';
+            ctx.shadowBlur = 20;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            // DIBUJAR ESFERA ROJA (MIEDO / MUERTE) SI ES VISIBLE
+            if (redAlpha > 0) {
+                ctx.save();
+                ctx.globalAlpha = redAlpha;
+                
+                const redGlow = ctx.createRadialGradient(redX, centerY, 5, redX, centerY, 30);
+                redGlow.addColorStop(0, '#f43f5e');
+                redGlow.addColorStop(1, 'rgba(244, 63, 94, 0)');
+                
+                ctx.beginPath();
+                ctx.arc(redX, centerY, 30, 0, Math.PI * 2);
+                ctx.fillStyle = redGlow;
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(redX, centerY, 14, 0, Math.PI * 2);
+                ctx.fillStyle = '#e11d48';
+                ctx.fill();
+
+                ctx.fillStyle = '#fda4af';
+                ctx.font = '10px Plus Jakarta Sans, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('Miedo / Muerte', redX, centerY - 22);
+
+                ctx.restore();
+            }
+
+            // DIBUJAR ESFERA AZUL / HUMANO
+            const humanGlow = ctx.createRadialGradient(humanX, centerY, 2, humanX, centerY, 22);
+            humanGlow.addColorStop(0, humanColor);
+            humanGlow.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+            ctx.beginPath();
+            ctx.arc(humanX, centerY, 22, 0, Math.PI * 2);
+            ctx.fillStyle = humanGlow;
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(humanX, centerY, 12, 0, Math.PI * 2);
+            ctx.fillStyle = '#ffffff';
+            ctx.shadowColor = humanColor;
+            ctx.shadowBlur = 15;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 11px Plus Jakarta Sans, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Humano', humanX, centerY - 20);
+
+            // MIRADA / DIRECCIÓN
+            ctx.beginPath();
+            if (t <= 8) {
+                ctx.arc(humanX - 5, centerY - 2, 2.5, 0, Math.PI * 2);
+                ctx.fillStyle = '#0f172a';
+            } else {
+                ctx.arc(humanX + 5, centerY - 2, 2.5, 0, Math.PI * 2);
+                ctx.fillStyle = '#0f172a';
+            }
+            ctx.fill();
+        }
+
+        function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+            if (isPlaying) {
+                elapsedTime = ((timestamp - startTime) / 1000) % DURATION;
+            }
+
+            timerText.textContent = elapsedTime.toFixed(1) + 's';
+            drawScene(elapsedTime);
+            animationFrameId = requestAnimationFrame(animate);
+        }
+
+        btnPlayPause.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            if (isPlaying) {
+                playIcon.className = 'fa-solid fa-pause';
+                playText.textContent = 'Pausar';
+            } else {
+                playIcon.className = 'fa-solid fa-play';
+                playText.textContent = 'Reanudar';
+            }
+        });
+
+        btnRestart.addEventListener('click', () => {
+            startTime = performance.now();
+            elapsedTime = 0;
+            if (!isPlaying) {
+                isPlaying = true;
+                playIcon.className = 'fa-solid fa-pause';
+                playText.textContent = 'Pausar';
+            }
+        });
+
+        animationFrameId = requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
